@@ -37,6 +37,10 @@ useEffect(() => {
     },
     error: (error) => console.warn(error),
   });
+
+  return () => {
+    subscription.unsubscribe();
+  }
 }, []);
 
 useEffect(() => {
